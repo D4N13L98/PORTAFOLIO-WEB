@@ -1,0 +1,17 @@
+@import url("https://fonts.cdnfonts.com/css/source-sans-pro");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
