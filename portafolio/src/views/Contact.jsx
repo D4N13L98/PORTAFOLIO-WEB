@@ -143,7 +143,7 @@ const Contact = () => {
           message: MessageInput,
         };
         fetch(
-          "https://portafolio-ypt7.onrender.com/portafolio/sendEmail",
+          "https://portafoliobackend-8qf2.onrender.com/portafolio/sendEmail",
           {
             method: "post",
             headers: { "Content-Type": "application/json" },
