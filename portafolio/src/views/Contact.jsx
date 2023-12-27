@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 90px 0px;
+  padding: 120px 0px;
   width: 100vw;
   background-image: url("https://img.freepik.com/vector-gratis/fondo-abstracto-fondo-diseno-monocromatico-baja-poli_1048-15252.jpg?w=1060&t=st=1703184582~exp=1703185182~hmac=8a0202da708d2cfa01d2ab57da9083f2ccb32c9e3ae98d5f1e2e153657fdf797");
 `;
@@ -15,6 +17,7 @@ const Container = styled.div`
 const Row = styled.div`
   height: 50%;
   width: 100%;
+  margin: auto;
 
   @media (max-width: 550px) {
     heigth: 844px;
@@ -36,7 +39,6 @@ const Col = styled.div`
 
   &.Form {
     height: auto;
-    margin: 50px 200px 0px;
     padding: 40px;
     background-color: #ffffff;
   }
@@ -133,8 +135,14 @@ const Contact = () => {
     const EmailInput = document.getElementById("EmailInput").value;
     const MessageInput = document.getElementById("MessageInput").value;
 
+    const MySwal = withReactContent(Swal);
+
     if (NameInput === "" || EmailInput === "" || MessageInput === "") {
-      alert("Complete los espacios");
+      Swal.fire({
+        title: "Complete blank spaces!",
+        text: "You have to complete all inputs",
+        icon: "error"
+      });
     } else {
       try {
         let data = {
@@ -151,6 +159,11 @@ const Contact = () => {
           },
           { timeout: 2147483647 }
         ).then((res) => res.json());
+        MySwal.fire({
+          title: "Message sent!",
+          text: "The message was sent to Daniel Castellanos",
+          icon: "success"
+        });
         document.getElementById("NameInput").value = "";
         document.getElementById("EmailInput").value = "";
         document.getElementById("MessageInput").value = "";

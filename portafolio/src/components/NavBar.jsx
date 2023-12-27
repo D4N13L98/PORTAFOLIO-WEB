@@ -97,7 +97,7 @@ const Buttons = styled(Link)`
   display: none;
 
   &.MenuIcon {
-    padding: 20px;
+    font-size: 20px;
     height: 90%
   }
 
@@ -116,7 +116,6 @@ const Buttons = styled(Link)`
 `;
 
 const ImgBox = styled.div`
-  height: 50px;
   width: 50px;
   display: flex;
   justify-content: center;
@@ -153,7 +152,7 @@ const NavBar = ({ scrollToComponent }) => {
     <Container className="container-fluid text-center">
       <IconContext.Provider value={{ color: "#333333" }}>
         <Row className="row justify-content-between">
-          <Col className="col-xxl-3 col-xl-4 col-lg-4 col-md-5 col-sm-6 col-7 NameBar">
+          <Col className="col-xxl-3 col-xl-4 col-lg-4 col-md-5 col-sm-6 col-8 NameBar">
             <ImgBox>
               <ProfileImage src={require("../files/photo.jpeg")} alt="img" />
             </ImgBox>
@@ -175,7 +174,7 @@ const NavBar = ({ scrollToComponent }) => {
               CONTACT
             </Text>
           </MenuSmall>
-          <Col className="col-xxl-4 col-xl-5 col-lg-5 col-md-5 col-sm-2 col-2 MenuBar">
+          <Col className="col-xxl-4 col-xl-5 col-lg-5 col-md-5 col-sm-2 col-4 MenuBar">
             <Text to="/" onClick={() => scrollToComponent("Introduction")}>
               HOME
             </Text>

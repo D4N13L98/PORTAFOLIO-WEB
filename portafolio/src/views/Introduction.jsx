@@ -40,9 +40,11 @@ const NameTitle = styled.p`
   padding: 30px;
   padding-top: 0;
   padding-bottom: 0;
+  line-height: 3.5rem;
 
   @media (max-width: 590px) {
     font-size: 2.5rem;
+    line-height: 2.2rem;
   }
 `;
 
