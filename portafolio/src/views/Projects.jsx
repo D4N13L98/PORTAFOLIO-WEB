@@ -178,6 +178,32 @@ const Projects = () => {
               </Buttons>
             </DescriptionProject>
           </Project>
+          <Project>
+            <ImgBox>
+              <Img
+                alt="Weather App"
+                src={require("../files/Weather App.png")}
+              ></Img>
+            </ImgBox>
+            <DescriptionProject>
+              <Text className="ProjectTextTitle">Weather App</Text>
+              <Text className="ProjectTextSubTitle">
+                The Real-Time Weather and Points of Interest Dashboard is a
+                React.js web application designed to provide users with
+                up-to-date weather information and interesting details about a
+                diverse set of cities and towns worldwide. The application
+                leverages weather APIs to fetch real-time weather data,
+                including temperature, humidity, and wind speed, ensuring users
+                have the latest meteorological information.
+              </Text>
+              <Buttons
+                to="https://weatherglobalapp.netlify.app"
+                target="_blank"
+              >
+                SEE PROJECT
+              </Buttons>
+            </DescriptionProject>
+          </Project>
         </Col>
       </Row>
     </Container>
